@@ -1,0 +1,37 @@
+html {
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #000;
+    color: #fff;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 940px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+#hero {
+    height: 600px;
+}
+
+#about-me {
+    background-image: url(images/hands-typing.jpg);
+}
+
+h1 {
+    max-width: 60%;
+    background-color: rgba(0, 0, 0, 0.5);
+    text-shadow: #000;
+    display: flex;
+    align-items: center;
+}
