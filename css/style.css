@@ -2,6 +2,17 @@ html {
     box-sizing: border-box;
 }
 
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+  background-color: #fff;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+  margin: 0;
+}
+
 header {
     background-color: #000;
     color: #fff;
@@ -10,28 +21,141 @@ header {
 .wrapper {
     margin: 0 auto;
     max-width: 940px;
-    display: flex;
+}
+
+header .wrapper {
     justify-content: space-between;
+    display: flex;
     align-items: center;
 }
 
 nav ul li {
     display: inline;
     margin: 10px;
+    text-decoration: none;
 }
 
 #hero {
     height: 600px;
-}
-
-#about-me {
-    background-image: url(images/hands-typing.jpg);
+    background: #cccccc url("images/hands-typing.jpg") center / cover no-repeat fixed;
+    filter: grayscale(70%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
+    margin: 0 auto;
+    text-align: center;
     max-width: 60%;
     background-color: rgba(0, 0, 0, 0.5);
+    color: #fafafa;
     text-shadow: #000;
-    display: flex;
+}
+
+.bio {
+    padding: 40px 0 30px;
     align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.bio-text {
+    width: 100%;
+    grid-column: 1 / span 2;
+}
+
+#services {
+    background-color: #fafafa;
+    padding: 2em 0;
+}
+
+.subtitle {
+    margin: 40px auto;
+    text-align: center;
+}
+.articles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+article {
+    padding: 0 10px;
+    margin: 0 25px auto;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    max-height: 400px;
+}
+
+.btn {
+    margin: 10px 0 auto;
+    max-width: 140px;
+    padding: 10px 20px;
+}
+
+a:link,
+a:visited {
+    background-color: black;
+    border-color: black;
+    color: white;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+a:hover,
+a:focus {
+    border-color: black;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.work-text{
+    margin: 0 auto;
+    max-width: 70%;
+    text-align: center;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+        "one one one two two two"
+        "tri tri for for fiv fiv";
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.portfolio > div:nth-child(1) {
+    grid-area: one;
+}
+
+.portfolio > div:nth-child(2) {
+    grid-area: two;
+}
+
+.portfolio > div:nth-child(3) {
+    grid-area: tri;
+}
+
+.portfolio > div:nth-child(4) {
+    grid-area: for;
+}
+
+.portfolio > div:nth-child(5) {
+    grid-area: fiv;
+}
+
+footer {
+    color: white;
+    background-color: black;
+    margin: 0 auto;
+    text-align: center;
 }
